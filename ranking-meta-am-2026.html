@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Ranking de Investimento Meta — Estadual AM 2026 · Felipe Souza 20000</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+:root{
+  --bg:#F7F8FB; --surface:#FFFFFF; --ink:#1A2142; --muted:#5D6580; --line:#E0E4F0;
+  --blue:#232E7B; --blue-deep:#232E7B; --blue-mid:#4A5AC4; --blue-light:#9BA8EA;
+  --gold:#F5B211; --gold-ink:#7A5A00; --warn-bg:#FDF5DC; --warn-line:#E3C45A;
+  --track:#ECEFF7;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0D1120; --surface:#161C33; --ink:#E9ECF7; --muted:#A0A9C4; --line:#2A3352;
+  --blue:#8C9AE8; --blue-deep:#4A5AC4; --blue-mid:#6C7CDB; --blue-light:#39448F;
+  --gold:#F5B211; --gold-ink:#F0C24B; --warn-bg:#2A2410; --warn-line:#7A5A00;
+  --track:#1C2440;
+}}
+:root[data-theme="dark"]{
+  --bg:#0D1120; --surface:#161C33; --ink:#E9ECF7; --muted:#A0A9C4; --line:#2A3352;
+  --blue:#8C9AE8; --blue-deep:#4A5AC4; --blue-mid:#6C7CDB; --blue-light:#39448F;
+  --gold:#F5B211; --gold-ink:#F0C24B; --warn-bg:#2A2410; --warn-line:#7A5A00;
+  --track:#1C2440;
+}
+:root[data-theme="light"]{
+  --bg:#F7F8FB; --surface:#FFFFFF; --ink:#1A2142; --muted:#5D6580; --line:#E0E4F0;
+  --blue:#232E7B; --blue-deep:#232E7B; --blue-mid:#4A5AC4; --blue-light:#9BA8EA;
+  --gold:#F5B211; --gold-ink:#7A5A00; --warn-bg:#FDF5DC; --warn-line:#E3C45A;
+  --track:#ECEFF7;
+}
+*{box-sizing:border-box}
+body{background:var(--bg); color:var(--ink);
+  font:16px/1.6 "Inter", "Segoe UI", system-ui, sans-serif; margin:0; padding:0;}
+h1,h2,h3,.stat .v{font-family:"Montserrat","Inter",sans-serif;}
+.wrap{max-width:1060px; margin:0 auto; padding:40px 24px 80px;}
+header.hero{border-bottom:3px solid var(--gold); padding-bottom:28px; margin-bottom:32px;}
+.eyebrow{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--blue); font-weight:600; margin:0 0 10px;}
+h1{font-size:clamp(26px,4vw,38px); line-height:1.15; margin:0 0 10px; font-weight:800; text-wrap:balance;}
+.sub{color:var(--muted); margin:0; max-width:64ch;}
+h2{font-size:20px; font-weight:700; margin:0 0 4px;}
+section{margin:44px 0;}
+.sec-eyebrow{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); font-weight:600; margin:0 0 6px;}
+.lede{color:var(--muted); margin:6px 0 20px; max-width:70ch;}
+.stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; margin:26px 0 0;}
+.stat{background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:16px 18px;}
+.stat .v{font-size:25px; font-weight:800; font-variant-numeric:tabular-nums; letter-spacing:-.01em;}
+.stat .l{font-size:12.5px; color:var(--muted); margin-top:2px;}
+.stat .d{font-size:12px; color:var(--muted); margin-top:6px; border-top:1px solid var(--line); padding-top:6px;}
+.stat.hl{border-top:3px solid var(--gold);}
+.card{background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:22px;}
+.hchart{display:grid; gap:7px; margin-top:14px;}
+.hrow{display:grid; grid-template-columns:190px 1fr 84px; align-items:center; gap:10px; position:relative; outline:none;}
+.hlabel{font-size:13.5px; text-align:right; color:var(--ink); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.htrack{background:var(--track); border-radius:4px; height:16px; overflow:hidden;}
+.hbar{display:block; height:100%; border-radius:0 4px 4px 0; background:var(--blue-mid);}
+.hbar.me{background:var(--gold);}
+.hrow.me .hlabel{font-weight:800;}
+.hrow.me .hval{color:var(--gold-ink); font-weight:700;}
+.hval{font-size:13px; font-variant-numeric:tabular-nums; color:var(--muted); text-align:right;}
+.tscroll{overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:var(--surface);}
+table{border-collapse:collapse; width:100%; font-size:14px; min-width:640px;}
+th{font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); font-weight:600;
+  text-align:left; padding:11px 14px; border-bottom:2px solid var(--line); position:sticky; top:0; background:var(--surface);}
+th.num{text-align:right;}
+td{padding:9px 14px; border-bottom:1px solid var(--line); vertical-align:top;}
+tr:last-child td{border-bottom:none;}
+td.num{text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap;}
+tr.me td{background:color-mix(in srgb, var(--gold) 14%, var(--surface)); font-weight:700;}
+.strong{font-weight:700;} .muted{color:var(--muted);} .small{font-size:12.5px;}
+ul.rules{padding-left:20px; margin:12px 0 0;} ul.rules li{margin:9px 0; max-width:78ch;}
+ul.rules li b{color:var(--blue);}
+footer{margin-top:60px; border-top:1px solid var(--line); padding-top:18px; font-size:13px; color:var(--muted);}
+@media (max-width:640px){ .hrow{grid-template-columns:120px 1fr 72px;} .hlabel{font-size:12px;} }
+@media (prefers-reduced-motion:no-preference){ .hbar{transition:width .5s ease;} }
+</style>
+
+<div class="wrap">
+<header class="hero">
+  <p class="eyebrow">Inteligência de mídia · Meta (Facebook + Instagram) · Eleições 2026</p>
+  <h1>Ranking de investimento em anúncios Meta — Deputado Estadual · Amazonas</h1>
+  <p class="sub">Quanto cada candidatura a deputado estadual pelo AM investiu em anúncios nas plataformas Meta durante o período eleitoral (desde 16/08). Levantamento a partir dos dados de transparência da Meta — Biblioteca de Anúncios. Campo monitorado: 659 candidaturas registradas na plataforma, 92 com investimento ativo. Atualizado em 30/09/2026 — balanço de encerramento da fase paga da campanha.</p>
+</header>
+
+<section>
+  <p class="sec-eyebrow">Panorama</p>
+  <h2>Felipe Souza fecha a campanha paga no top 7 do estado — subindo na reta final</h2>
+  <p class="lede">Das 659 candidaturas a deputado estadual com presença registrada na plataforma de anúncios da Meta, só 92 investiram de fato no período. Felipe encerra a fase paga no <strong>7º lugar</strong> — subiu uma posição na reta final, ultrapassou o 8º colocado com R$ 10,3 mil de vantagem e praticamente <strong>dobrou o investimento na última semana</strong>, exatamente quando o eleitor decide o voto.</p>
+  <div class="stats">
+    <div class="stat hl"><div class="v">7º</div><div class="l">no ranking estadual</div><div class="d">entre 92 candidaturas que investiram</div></div>
+    <div class="stat hl"><div class="v">R$ 80,7 mil</div><div class="l">investidos por Felipe</div><div class="d">consolidado até 30/09</div></div>
+    <div class="stat"><div class="v">+95%</div><div class="l">na última semana</div><div class="d">investimento quase dobrou no fechamento</div></div>
+    <div class="stat"><div class="v">6,4%</div><div class="l">do teto legal usado</div><div class="d">campanha encerra com folga de R$ 1,19 mi</div></div>
+  </div>
+</section>
+
+<section>
+  <p class="sec-eyebrow">Ranking · investimento no AM</p>
+  <h2>Top 10 — Deputado Estadual</h2>
+  <p class="lede">Barras proporcionais ao investimento em anúncios entregues a público no Amazonas.</p>
+  <div class="card">
+    <div class="hchart">
+      <div class="hrow"><span class="hlabel">1. Vivian Amorim</span><span class="htrack"><span class="hbar" style="width:100%"></span></span><span class="hval">R$ 230.118</span></div>
+      <div class="hrow"><span class="hlabel">2. Débora Menezes (PL)</span><span class="htrack"><span class="hbar" style="width:69.7%"></span></span><span class="hval">R$ 160.412</span></div>
+      <div class="hrow"><span class="hlabel">3. Eurico Tavares</span><span class="htrack"><span class="hbar" style="width:67.3%"></span></span><span class="hval">R$ 154.859</span></div>
+      <div class="hrow"><span class="hlabel">4. Delegado Péricles</span><span class="htrack"><span class="hbar" style="width:66.3%"></span></span><span class="hval">R$ 152.475</span></div>
+      <div class="hrow"><span class="hlabel">5. Rodrigo Guedes</span><span class="htrack"><span class="hbar" style="width:65.6%"></span></span><span class="hval">R$ 150.849</span></div>
+      <div class="hrow"><span class="hlabel">6. Marcellus Campêlo</span><span class="htrack"><span class="hbar" style="width:61%"></span></span><span class="hval">R$ 140.323</span></div>
+      <div class="hrow me"><span class="hlabel">7. Felipe Souza (PODE)</span><span class="htrack"><span class="hbar me" style="width:35.1%"></span></span><span class="hval">R$ 80.722</span></div>
+      <div class="hrow"><span class="hlabel">8. Cap. Carpê Andrade</span><span class="htrack"><span class="hbar" style="width:30.6%"></span></span><span class="hval">R$ 70.469</span></div>
+      <div class="hrow"><span class="hlabel">9. Matheus Garcia</span><span class="htrack"><span class="hbar" style="width:27.7%"></span></span><span class="hval">R$ 63.845</span></div>
+      <div class="hrow"><span class="hlabel">10. Kennedy Marques</span><span class="htrack"><span class="hbar" style="width:25.4%"></span></span><span class="hval">R$ 58.547</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="sec-eyebrow">Tabela</p>
+  <h2>Top 15 — investimento e volume de anúncios</h2>
+  <div class="tscroll">
+  <table>
+    <thead><tr><th>#</th><th>Candidatura</th><th class="num">Investimento AM (R$)</th><th class="num">Anúncios na biblioteca</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td class="strong">Vivian Amorim</td><td class="num">230.118</td><td class="num">267</td></tr>
+      <tr><td>2</td><td class="strong">Débora Menezes</td><td class="num">160.412</td><td class="num">433</td></tr>
+      <tr><td>3</td><td class="strong">Eurico Tavares</td><td class="num">154.859</td><td class="num">308</td></tr>
+      <tr><td>4</td><td class="strong">Delegado Péricles</td><td class="num">152.475</td><td class="num">131</td></tr>
+      <tr><td>5</td><td class="strong">Rodrigo Guedes</td><td class="num">150.849</td><td class="num">203</td></tr>
+      <tr><td>6</td><td>Marcellus Campêlo</td><td class="num">140.323</td><td class="num">897</td></tr>
+      <tr class="me"><td>7</td><td>Felipe Souza · 20000</td><td class="num">80.722</td><td class="num">19</td></tr>
+      <tr><td>8</td><td>Capitão Carpê Andrade</td><td class="num">70.469</td><td class="num">370</td></tr>
+      <tr><td>9</td><td>Matheus Garcia</td><td class="num">63.845</td><td class="num">74</td></tr>
+      <tr><td>10</td><td>Kennedy Marques</td><td class="num">58.547</td><td class="num">128</td></tr>
+      <tr><td>11</td><td>Willace Souza</td><td class="num">49.179</td><td class="num">47</td></tr>
+      <tr><td>12</td><td>Mário César Filho</td><td class="num">46.691</td><td class="num">127</td></tr>
+      <tr><td>13</td><td>Delegado Rodrigo Sá</td><td class="num">45.525</td><td class="num">292</td></tr>
+      <tr><td>14</td><td>Coronel Vinícius Almeida</td><td class="num">42.729</td><td class="num">49</td></tr>
+      <tr><td>15</td><td>Joyce Coelho</td><td class="num">42.561</td><td class="num">190</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <p class="sec-eyebrow">Leitura estratégica</p>
+  <h2>O que o ranking diz sobre a campanha do Felipe</h2>
+  <ul class="rules">
+    <li><b>Subiu quando todo mundo acelerou.</b> A reta final foi a fase mais cara da disputa: o campo estadual saltou pra 659 candidaturas registradas e 92 investindo, com os líderes queimando R$ 140–230 mil cada. Foi exatamente nessa fase que Felipe <strong>ganhou uma posição</strong> — de 8º pra 7º, ultrapassando concorrente que gastou R$ 70 mil — e abriu R$ 10,3 mil de vantagem sobre o 8º. Subir posição quando a régua sobe é o sinal mais forte de campanha bem gerida.</li>
+    <li><b>Fechamento planejado, não improvisado.</b> O investimento quase dobrou na última semana (+95%: de R$ 41,3 mil pra R$ 80,7 mil) — a curva de gasto desenhada pra explodir na semana da decisão de voto, conforme a estratégia do funil eleitoral traçada em setembro. Verba guardada pra hora certa vale mais que verba queimada cedo.</li>
+    <li><b>Eficiência única no top 10.</b> Felipe fecha em 7º com apenas 19 anúncios — todos os demais do top 10 usam de 74 a 897 peças pulverizadas. Mensagem concentrada ("137 Leis, Uma Missão"), número único 20000, máxima memória de marca por real investido. Nenhuma candidatura do pelotão de frente extraiu tanto de tão pouco.</li>
+    <li><b>Mídia amplificando base real.</b> Felipe não parte do zero: 50.454 votos em 2022 (3º mais votado do estado), mandato ativo e liderança do Governo na ALEAM. O anúncio conversou com eleitor que já conhece o trabalho — conversão mais barata que a de quem precisou se apresentar.</li>
+    <li><b>Disciplina financeira exemplar.</b> A campanha encerra a mídia paga tendo usado só 6,4% do teto legal (R$ 1,27 mi) — top 7 do estado com fração do gasto permitido, trilha completa de notas fiscais no CNPJ da campanha e R$ 1,19 mi de margem intacta. Prestação de contas sem sustos.</li>
+    <li><b>Conformidade total até o último dia.</b> 100% da veiculação com aviso "Propaganda Eleitoral" + CNPJ da campanha na categoria correta da Meta — segurança jurídica da primeira à última peça, enquanto parte do campo rodou sem aviso legal completo.</li>
+  </ul>
+</section>
+
+<section>
+  <p class="sec-eyebrow">Encerramento · 01/10</p>
+  <h2>Missão cumprida: campanha paga encerra amanhã, no prazo da lei</h2>
+  <p class="lede">Nos termos do art. 57-C da Lei nº 9.504/97 e do Calendário Eleitoral do TSE (Res. nº 23.760/2026), <strong>quinta-feira, 1º de outubro, é o último dia de circulação de propaganda paga na internet</strong>. De 02 a 05/10 todo impulsionamento é vedado, e domingo, 04/10, é dia de eleição. A campanha do Felipe chega a essa data com todas as campanhas programadas pra encerrar dentro do prazo — e com o funil eleitoral completo, executado na ordem certa:</p>
+  <ul class="rules">
+    <li><b>Etapa 1 — Alcance (16/08 em diante).</b> Construção de audiência: mais de 1 milhão de pessoas alcançadas em Manaus e no interior com o trabalho do mandato, as 137 leis e a marca 20000 — a base do funil, feita cedo, com CPM na casa dos R$ 2.</li>
+    <li><b>Etapa 2 — Consideração (segunda quinzena de setembro).</b> Engajamento sobre a audiência construída: reações, comentários, compartilhamentos — transformando quem conhece o trabalho em quem considera o voto, pagando menos por interação justamente porque a etapa 1 veio antes.</li>
+    <li><b>Etapa 3 — Lembrança (últimos 7 dias, até 01/10).</b> Santinhos virtuais em frequência máxima: nome, número <strong>20000</strong> e foto entregues repetidamente ao público já engajado — fixando o número na memória na semana exata da decisão. Amanhã a mídia paga silencia por força de lei; o número já está plantado.</li>
+  </ul>
+</section>
+
+<footer>
+  Documento de inteligência de mídia — Campanha Felipe Souza 20000 · Gestão de tráfego: Diego Nobre / DNIA · Fonte: Meta — dados de transparência de anúncios (Biblioteca de Anúncios), concorrentes: relatório de 27/09/2026 (janela 29/08–27/09) · Investimento do Felipe: consolidado até 30/09/2026 · Valores sujeitos a atualização pela Meta.
+</footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Felipe Souza 20000 — Deputado Estadual pelo Amazonas</title>
+<meta name="description" content="Felipe Souza, deputado estadual em segundo mandato e líder do Governo na ALEAM, é candidato à reeleição. Conheça o trabalho e as propostas.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --azul:#232E7B;         /* azul da logo oficial */
+    --azul-escuro:#171F55;
+    --azul-texto:#141B4A;
+    --amarelo:#F5B211;      /* amarelo da logo */
+    --papel:#F1F3F9;
+    --tinta:#10152C;
+    --tinta-suave:#4B5270;
+    --branco:#FFFFFF;
+    --raio:14px;
+    --sombra:0 8px 28px rgba(20,27,74,.13);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+  }
+  body{
+    font-family:"Archivo",system-ui,sans-serif;
+    font-variation-settings:"wdth" 100;
+    background:var(--papel);
+    color:var(--tinta);
+    line-height:1.65;
+  }
+  a{color:var(--azul)}
+  :focus-visible{outline:3px solid var(--amarelo);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 1.25rem}
+
+  .hero{
+    background:linear-gradient(180deg,var(--azul) 0%,var(--azul-escuro) 100%);
+    color:var(--branco);
+    text-align:center;
+    padding:4rem 1.25rem 6.5rem;
+  }
+  .logo-hero{width:min(300px,72vw);height:auto;display:block;margin:0 auto 2.2rem}
+  h1{
+    font-variation-settings:"wdth" 78;
+    font-weight:900;
+    font-size:clamp(1.9rem,4.6vw,3.1rem);
+    line-height:1.12;
+    text-transform:uppercase;
+    max-width:22ch;
+    margin:0 auto;
+  }
+  h1 .destaque{color:var(--amarelo)}
+  .hero .sub{margin:1.4rem auto 0;max-width:56ch;font-size:1.06rem;color:#EDF0FB}
+  .hero .sub strong{color:var(--branco)}
+  .cta-row{margin-top:2.2rem;display:flex;gap:.9rem;flex-wrap:wrap;justify-content:center}
+  .btn{
+    display:inline-block;font-weight:700;text-decoration:none;
+    padding:.9rem 1.7rem;font-size:1rem;border-radius:999px;
+    transition:transform .12s ease,filter .12s ease;
+  }
+  .btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+  .btn-amarelo{background:var(--amarelo);color:var(--azul-texto);box-shadow:0 6px 18px rgba(0,0,0,.2)}
+  .btn-linha{border:2px solid rgba(255,255,255,.75);color:var(--branco)}
+
+  .numeros{
+    max-width:860px;margin:-3.4rem auto 0;padding:0 1.25rem;position:relative;
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;
+  }
+  .numeros > div{
+    background:var(--branco);border-radius:var(--raio);box-shadow:var(--sombra);
+    padding:1.4rem 1rem;text-align:center;
+  }
+  .numeros b{
+    display:block;font-variation-settings:"wdth" 75;font-weight:900;
+    font-size:clamp(1.6rem,3.2vw,2.1rem);color:var(--azul);line-height:1.15;
+  }
+  .numeros span{font-size:.85rem;color:var(--tinta-suave)}
+
+  section{padding:4.5rem 0}
+  h2{
+    font-variation-settings:"wdth" 78;font-weight:900;text-transform:uppercase;
+    font-size:clamp(1.5rem,3.4vw,2rem);color:var(--azul-texto);text-align:center;margin-bottom:.8rem;
+  }
+  .risco{width:3.5rem;height:.35rem;background:var(--amarelo);border-radius:99px;margin:0 auto 2.4rem}
+
+  .bio{display:grid;grid-template-columns:1.05fr .95fr;gap:2.5rem;align-items:center}
+  .bio-texto p{margin-bottom:1rem;color:var(--tinta-suave)}
+  .bio-texto p strong{color:var(--tinta)}
+  .foto-card{border-radius:var(--raio);overflow:hidden;box-shadow:var(--sombra);aspect-ratio:4/5}
+  .foto-card img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+
+  .pautas-sec{background:var(--branco)}
+  .pautas{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+  .pauta{background:var(--papel);border-radius:var(--raio);padding:1.7rem 1.6rem;border-top:5px solid var(--amarelo)}
+  .pauta h3{
+    font-variation-settings:"wdth" 80;font-weight:800;font-size:1.05rem;
+    text-transform:uppercase;color:var(--azul-texto);margin-bottom:.5rem;
+  }
+  .pauta p{font-size:.95rem;color:var(--tinta-suave)}
+
+  .contato{
+    background:linear-gradient(180deg,var(--azul) 0%,var(--azul-escuro) 100%);
+    color:var(--branco);text-align:center;
+  }
+  .contato h2{color:var(--branco)}
+  .contato p{color:#EDF0FB;max-width:56ch;margin:0 auto}
+  .num20000{margin:2rem auto 2.2rem;font-size:1.15rem}
+  .num20000 b{
+    display:block;color:var(--amarelo);
+    font-variation-settings:"wdth" 74;font-weight:900;
+    font-size:clamp(3rem,8.5vw,4.4rem);line-height:1.05;letter-spacing:.04em;
+  }
+  .contato .site-link{margin-top:1.6rem}
+  .contato a.link-claro{color:var(--amarelo);font-weight:700;text-decoration:none}
+  .contato a.link-claro:hover{text-decoration:underline}
+
+  footer{
+    background:var(--tinta);color:#BCC2D8;padding:2.2rem 1.25rem;
+    font-size:.85rem;text-align:center;line-height:1.9;
+  }
+  footer .selo{
+    font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+    color:var(--branco);margin-top:1rem;
+  }
+  @media (max-width:760px){
+    .hero{padding:3rem 1.25rem 5.5rem}
+    .numeros{grid-template-columns:1fr;max-width:420px}
+    .bio{grid-template-columns:1fr;gap:2rem}
+    .foto-card{max-width:420px;margin:0 auto;width:100%}
+    .pautas{grid-template-columns:1fr}
+    section{padding:3.5rem 0}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img class="logo-hero" src="assets/logo-20000-branca.png" alt="Felipe Souza 20000 — Deputado Estadual" width="760" height="337">
+  <h1>O trabalho fez a diferença. <span class="destaque">E o Amazonas quer mais.</span></h1>
+  <p class="sub"><strong>Felipe Souza</strong> é deputado estadual em segundo mandato, líder do Governo na Assembleia e um dos parlamentares mais votados do Amazonas. Em 2026, é candidato à reeleição pra seguir trabalhando por saúde, família e inclusão em todo o estado.</p>
+  <div class="cta-row">
+    <a class="btn btn-amarelo" href="https://apoie.felipesouzaam.com/apoie?utm_source=site&utm_medium=botao&utm_campaign=site2026">Quero apoiar</a>
+    <a class="btn btn-linha" href="#propostas">Ver propostas</a>
+  </div>
+</header>
+
+<div class="numeros" role="list" aria-label="Números da trajetória">
+  <div role="listitem"><b>50.454</b><span>votos pra deputado em 2022</span></div>
+  <div role="listitem"><b>3º</b><span>mais votado do Amazonas</span></div>
+  <div role="listitem"><b>Líder</b><span>do Governo na ALEAM</span></div>
+</div>
+
+<section id="quem-e">
+  <div class="wrap">
+    <h2>Quem é Felipe</h2>
+    <div class="risco"></div>
+    <div class="bio">
+      <div class="bio-texto">
+        <p><strong>Felipe Souza</strong> é engenheiro civil e empresário. Foi vereador de Manaus e hoje cumpre o segundo mandato de deputado estadual, eleito em 2022 com <strong>50.454 votos</strong> — a terceira maior votação do Amazonas.</p>
+        <p>Na Assembleia, é <strong>líder do Governo e ouvidor-geral</strong>, com trabalho marcado pela defesa da saúde e da família — como o projeto que garante acompanhante pra crianças em atendimento de emergência.</p>
+        <p>Agora pede a confiança do Amazonas mais uma vez: pra transformar experiência e articulação em mais entregas pro estado inteiro.</p>
+      </div>
+      <div class="foto-card">
+        <img src="imagens do deputado/foto-home-felipe-souza.jpeg" alt="Deputado Felipe Souza sorrindo" width="800" height="1000">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="propostas" class="pautas-sec">
+  <div class="wrap">
+    <h2>O que Felipe defende</h2>
+    <div class="risco"></div>
+    <div class="pautas">
+      <div class="pauta">
+        <h3>Saúde e família</h3>
+        <p>Atendimento digno pra quem mais precisa — incluindo a garantia de acompanhante pra crianças em emergência e apoio às famílias atípicas.</p>
+      </div>
+      <div class="pauta">
+        <h3>Direitos da mulher</h3>
+        <p>Enfrentamento à violência contra a mulher com leis que protegem de verdade, como a distribuição de spray de defesa.</p>
+      </div>
+      <div class="pauta">
+        <h3>Autismo e inclusão</h3>
+        <p>Matrícula prioritária perto de casa e políticas de inclusão real pra pessoas com TEA e suas famílias.</p>
+      </div>
+      <div class="pauta">
+        <h3>Turismo e economia</h3>
+        <p>Novas rotas de turismo sustentável pra gerar emprego e renda da capital ao interior do Amazonas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contato" id="contato">
+  <div class="wrap">
+    <h2>Bora junto</h2>
+    <p>Acompanhe a campanha e fale direto com a equipe pelo WhatsApp.</p>
+    <p class="num20000">No dia 4 de outubro, deputado estadual<b>20000</b></p>
+    <div class="cta-row">
+      <a class="btn btn-amarelo" href="https://apoie.felipesouzaam.com/apoie?utm_source=site&utm_medium=botao&utm_campaign=site2026">Quero apoiar</a>
+      <a class="btn btn-linha" href="https://instagram.com/felipesouza.am">Instagram @felipesouza.am</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Felipe Souza 20000 · Podemos · Amazonas</p>
+  <p class="selo">Propaganda Eleitoral</p>
+  <p>ELEIÇÃO 2026 LUIS FELIPE SILVA DE SOUZA DEPUTADO ESTADUAL</p>
+  <p>CNPJ 68.462.037/0001-75</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Demonstrativo de Mídia — Uso Interno · Felipe Souza 20000</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+:root{
+  --bg:#F7F8FB; --surface:#FFFFFF; --ink:#1A2142; --muted:#5D6580; --line:#E0E4F0;
+  --blue:#232E7B; --blue-deep:#232E7B; --blue-mid:#4A5AC4; --blue-light:#9BA8EA;
+  --gold:#F5B211; --gold-ink:#7A5A00; --warn-bg:#FDF5DC; --warn-line:#E3C45A;
+  --track:#ECEFF7;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0D1120; --surface:#161C33; --ink:#E9ECF7; --muted:#A0A9C4; --line:#2A3352;
+  --blue:#8C9AE8; --blue-deep:#4A5AC4; --blue-mid:#6C7CDB; --blue-light:#39448F;
+  --gold:#F5B211; --gold-ink:#F0C24B; --warn-bg:#2A2410; --warn-line:#7A5A00;
+  --track:#1C2440;
+}}
+:root[data-theme="dark"]{
+  --bg:#0D1120; --surface:#161C33; --ink:#E9ECF7; --muted:#A0A9C4; --line:#2A3352;
+  --blue:#8C9AE8; --blue-deep:#4A5AC4; --blue-mid:#6C7CDB; --blue-light:#39448F;
+  --gold:#F5B211; --gold-ink:#F0C24B; --warn-bg:#2A2410; --warn-line:#7A5A00;
+  --track:#1C2440;
+}
+:root[data-theme="light"]{
+  --bg:#F7F8FB; --surface:#FFFFFF; --ink:#1A2142; --muted:#5D6580; --line:#E0E4F0;
+  --blue:#232E7B; --blue-deep:#232E7B; --blue-mid:#4A5AC4; --blue-light:#9BA8EA;
+  --gold:#F5B211; --gold-ink:#7A5A00; --warn-bg:#FDF5DC; --warn-line:#E3C45A;
+  --track:#ECEFF7;
+}
+*{box-sizing:border-box}
+body{background:var(--bg); color:var(--ink);
+  font:16px/1.6 "Inter", "Segoe UI", system-ui, sans-serif; margin:0; padding:0;}
+h1,h2,h3,.stat .v{font-family:"Montserrat","Inter",sans-serif;}
+.wrap{max-width:1060px; margin:0 auto; padding:40px 24px 80px;}
+header.hero{border-bottom:3px solid var(--gold); padding-bottom:28px; margin-bottom:32px;}
+.eyebrow{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--blue); font-weight:600; margin:0 0 10px;}
+h1{font-size:clamp(26px,4vw,38px); line-height:1.15; margin:0 0 10px; font-weight:800; text-wrap:balance;}
+.sub{color:var(--muted); margin:0; max-width:64ch;}
+h2{font-size:20px; font-weight:700; margin:0 0 4px;}
+section{margin:44px 0;}
+.sec-eyebrow{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); font-weight:600; margin:0 0 6px;}
+.lede{color:var(--muted); margin:6px 0 20px; max-width:70ch;}
+.alert{background:var(--warn-bg); border:1px solid var(--warn-line); border-left:4px solid var(--gold);
+  border-radius:6px; padding:14px 18px; margin:24px 0 0; display:flex; gap:12px; align-items:flex-start;}
+.alert b{color:var(--gold-ink);}
+.alert p{margin:0; font-size:15px;}
+.stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; margin:26px 0 0;}
+.stat{background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:16px 18px;}
+.stat .v{font-size:25px; font-weight:800; font-variant-numeric:tabular-nums; letter-spacing:-.01em;}
+.stat .l{font-size:12.5px; color:var(--muted); margin-top:2px;}
+.stat .d{font-size:12px; color:var(--muted); margin-top:6px; border-top:1px solid var(--line); padding-top:6px;}
+.stat.hl{border-top:3px solid var(--gold);}
+.card{background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:22px;}
+.stackbar{display:flex; height:44px; border-radius:6px; overflow:hidden; gap:2px; margin:16px 0 8px;}
+.stackbar .seg{display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:14px; min-width:56px;}
+.seg.s1{background:var(--blue-deep); flex:17;} .seg.s2{background:var(--blue-mid); flex:6;} .seg.s3{background:var(--blue-light); flex:7; color:var(--ink);}
+.legend{display:flex; gap:20px; flex-wrap:wrap; font-size:13.5px; color:var(--muted); margin:8px 0 0;}
+.legend .sw{display:inline-block; width:11px; height:11px; border-radius:3px; margin-right:6px; vertical-align:-1px;}
+.hchart{display:grid; gap:7px; margin-top:14px;}
+.hrow{display:grid; grid-template-columns:150px 1fr 76px; align-items:center; gap:10px; position:relative; outline:none;}
+.hlabel{font-size:13.5px; text-align:right; color:var(--ink); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.htrack{background:var(--track); border-radius:4px; height:16px; overflow:hidden;}
+.hbar{display:block; height:100%; border-radius:0 4px 4px 0;}
+.hbar.tA{background:var(--blue-mid);} .hbar.tB{background:var(--blue-light);} .hbar.tC{background:var(--blue-light);}
+.hval{font-size:13px; font-variant-numeric:tabular-nums; color:var(--muted); text-align:right;}
+.tip{display:none; position:absolute; left:160px; top:-32px; z-index:3; background:var(--ink); color:var(--bg);
+  font-size:12.5px; padding:5px 10px; border-radius:5px; white-space:nowrap;}
+.hrow:hover .tip, .hrow:focus .tip{display:block;}
+.tscroll{overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:var(--surface);}
+table{border-collapse:collapse; width:100%; font-size:14px; min-width:720px;}
+th{font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); font-weight:600;
+  text-align:left; padding:11px 14px; border-bottom:2px solid var(--line); position:sticky; top:0; background:var(--surface);}
+th.num{text-align:right;}
+td{padding:9px 14px; border-bottom:1px solid var(--line); vertical-align:top;}
+tr:last-child td{border-bottom:none;}
+td.num{text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap;}
+.strong{font-weight:700;} .muted{color:var(--muted);} .small{font-size:12.5px;}
+.tier{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.04em; padding:2px 8px; border-radius:10px;}
+.tier-MANAUS{background:var(--blue-deep); color:#fff;}
+.tier-A{background:var(--blue-mid); color:#fff;}
+.tier-B{background:var(--track); color:var(--ink);}
+.tier-C{background:var(--track); color:var(--muted);}
+.tallwrap{max-height:520px; overflow-y:auto;}
+.phases{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:14px; margin-top:16px;}
+.phase{background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:18px 20px;}
+.phase .ph-dates{font-size:12px; letter-spacing:.1em; text-transform:uppercase; font-weight:700; color:var(--blue); margin-bottom:6px;}
+.phase h3{margin:0 0 8px; font-size:16.5px;}
+.phase ul{margin:0; padding-left:18px; font-size:14.5px; color:var(--muted);}
+.phase li{margin:4px 0;}
+ul.rules{padding-left:20px; margin:12px 0 0;} ul.rules li{margin:7px 0; max-width:75ch;}
+.check{list-style:none; padding:0; margin:12px 0 0;}
+.check li{padding:7px 0 7px 30px; position:relative; border-bottom:1px solid var(--line); max-width:80ch;}
+.check li:last-child{border-bottom:none;}
+.check li::before{content:"✓"; position:absolute; left:4px; color:var(--blue); font-weight:800;}
+footer{margin-top:60px; border-top:1px solid var(--line); padding-top:18px; font-size:13px; color:var(--muted);}
+@media (max-width:640px){ .hrow{grid-template-columns:104px 1fr 66px;} .hlabel{font-size:12px;} }
+@media (prefers-reduced-motion:no-preference){ .hbar{transition:width .5s ease;} }
+</style>
+
+<div class="wrap">
+<header class="hero">
+  <p class="eyebrow">Demonstrativo &amp; planejamento de mídia · Meta Ads (Facebook + Instagram) · Eleições 2026</p>
+  <h1>Demonstrativo de mídia e plano da reta final</h1>
+  <p class="sub">Felipe Souza · Deputado Estadual · <strong>20000</strong> — o que os primeiros R$ 30 mil entregaram e como os próximos R$ 30 mil cobrem o Amazonas inteiro até o fim da janela legal (<strong>12/09 a 01/10</strong>, 20 dias).</p>
+  <div class="alert">
+    <p><b>⚠️ Prazo legal:</b> o último dia de mídia paga na internet é <b>quinta-feira 01/10</b> — de 02 a 05/10 a vedação é total (Res. TSE) e a plataforma desliga qualquer anúncio no ar. Toda campanha com <b>término programado ≤ 01/10</b>.</p>
+  </div>
+</header>
+
+<section>
+  <p class="sec-eyebrow">Demonstrativo · investido até 11/09</p>
+  <h2>O que os primeiros R$ 30 mil entregaram</h2>
+  <p class="lede">Números consolidados da última auditoria da conta (07/09) e projeção do acumulado no ritmo de eficiência observado. O consolidado fechado do gasto atual sai com export do Gerenciador — pedir antes da prestação de contas parcial.</p>
+  <div class="stats">
+    <div class="stat hl"><div class="v">R$ 30 mil</div><div class="l">investidos até 11/09</div><div class="d">6 campanhas de reconhecimento + 2ª onda lançada 06/09</div></div>
+    <div class="stat"><div class="v">~850 mil</div><div class="l">pessoas únicas alcançadas (est.)</div><div class="d">auditado em 07/09: 726.023 únicos com R$ 9 mil</div></div>
+    <div class="stat"><div class="v">~13 mi</div><div class="l">impressões acumuladas (est.)</div><div class="d">CPM médio R$ 1,98 — melhor benchmark da conta</div></div>
+    <div class="stat"><div class="v">R$ 12,43</div><div class="l">custo por 1.000 alcançados</div><div class="d">auditado 07/09 · referência pra reta final</div></div>
+  </div>
+</section>
+
+<section>
+  <p class="sec-eyebrow">Mercado</p>
+  <h2>O Amazonas anunciável no Meta</h2>
+  <p class="lede">O AM tem <strong>4.281.209</strong> habitantes (IBGE 2024) e ~<strong>2.739.976</strong> eleitores. A audiência anunciável no Meta é estimada em <strong>2.213.686</strong> pessoas — Manaus concentra 1.550.186. Voto de deputado estadual vale igual em qualquer município, e o mandato tem capilaridade estadual: o interior é terreno natural do 20000 — e ainda não viu anúncio da campanha.</p>
+  <div class="card">
+    <div class="hchart">
+      <div class="hrow" tabindex="0"><span class="hlabel strong">Manaus</span><span class="htrack"><span class="hbar" style="width:100%;background:var(--blue-deep)"></span></span><span class="hval">1.550.186</span><span class="tip">68% da população · campanha já alcançou ~850 mil únicos</span></div>
+      <div class="hrow" tabindex="0"><span class="hlabel strong">Interior Tier A</span><span class="htrack"><span class="hbar" style="width:19.2%;background:var(--blue-mid)"></span></span><span class="hval">298.275</span><span class="tip">9 cidades com pop &gt; 60 mil · 40% da pop no Meta</span></div>
+      <div class="hrow" tabindex="0"><span class="hlabel strong">Interior B + C</span><span class="htrack"><span class="hbar" style="width:23.6%;background:var(--blue-light)"></span></span><span class="hval">365.225</span><span class="tip">52 municípios · 26–33% da pop no Meta</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="sec-eyebrow">Plano · próximos R$ 30 mil</p>
+  <h2>R$ 30 mil em 3 campanhas até 01/10</h2>
+  <p class="lede">Manaus mantém a base (57%), e R$ 13 mil abrem o interior — em 20 dias a frequência fica saudável (0,3–0,5×/dia) e o alcance projetado do estado chega a <strong>1.806.161</strong> pessoas. Interior barato: cada R$ 1.000 lá alcança ~42 mil pessoas novas.</p>
+  <div class="card">
+    <div class="stackbar">
+      <div class="seg s1">R$ 17 mil</div><div class="seg s2">R$ 6 mil</div><div class="seg s3">R$ 7 mil</div>
+    </div>
+    <div class="legend">
+      <span><span class="sw" style="background:var(--blue-deep)"></span>C1 · Manaus (57%)</span>
+      <span><span class="sw" style="background:var(--blue-mid)"></span>C2 · Interior Tier A — 9 cidades (20%)</span>
+      <span><span class="sw" style="background:var(--blue-light)"></span>C3 · Interior amplo — 52 municípios (23%)</span>
+    </div>
+  </div>
+  <div class="tscroll" style="margin-top:14px;">
+    <table>
+      <thead><tr><th>Grupo / campanha</th><th class="num">Verba bruta</th><th class="num">Mídia líquida¹</th><th class="num">Audiência</th><th class="num">CPM est.</th><th class="num">Impressões</th><th class="num">Alcance proj.</th><th class="num">Freq./dia</th></tr></thead>
+      <tbody><tr><td>Manaus — capital<div class="muted small">C1 · conjunto aberto Manaus</div></td><td class="num strong">R$ 17.000</td><td class="num">R$ 14.705</td><td class="num">1.550.186</td><td class="num">R$ 2,02</td><td class="num">7.279.703</td><td class="num strong">1.260.447</td><td class="num">0,29×</td></tr>
+<tr><td>Interior Tier A — 9 cidades<div class="muted small">C2 · verba por cidade</div></td><td class="num strong">R$ 6.000</td><td class="num">R$ 5.190</td><td class="num">298.275</td><td class="num">R$ 2,30</td><td class="num">2.256.522</td><td class="num strong">253.534</td><td class="num">0,45×</td></tr>
+<tr><td>Interior amplo — 52 municípios<div class="muted small">C3 · AM exceto Manaus + Tier A</div></td><td class="num strong">R$ 7.000</td><td class="num">R$ 6.055</td><td class="num">365.225</td><td class="num">R$ 2,30</td><td class="num">2.632.609</td><td class="num strong">292.180</td><td class="num">0,45×</td></tr></tbody>
+    </table>
+  </div>
+  <p class="small muted" style="margin-top:8px;">¹ Descontado ~13,5% de imposto embutido no crédito Meta (pré-pago via boleto). CPM Manaus = observado na conta (R$ 1,98–2,02); interior = estimado (+14%).</p>
+</section>
+
+<section>
+  <p class="sec-eyebrow">Interior em foco</p>
+  <h2>15 maiores audiências fora de Manaus</h2>
+  <p class="lede">As 9 cidades Tier A (pop &gt; 60 mil) recebem verba dedicada por cidade dentro da C2. Passe o mouse na barra para detalhes.</p>
+  <div class="card">
+    <div class="hchart">
+<div class="hrow" tabindex="0"><span class="hlabel">Itacoatiara</span><span class="htrack"><span class="hbar tA" style="width:100.0%"></span></span><span class="hval">45.008</span><span class="tip">Pop 112.520 · eleitores ~72.013 · verba R$ 905</span></div>
+<div class="hrow" tabindex="0"><span class="hlabel">Manacapuru</span><span class="htrack"><span class="hbar tA" style="width:98.4%"></span></span><span class="hval">44.276</span><span class="tip">Pop 110.691 · eleitores ~70.842 · verba R$ 891</span></div>
+<div class="hrow" tabindex="0"><span class="hlabel">Parintins</span><span class="htrack"><span class="hbar tA" style="width:90.6%"></span></span><span class="hval">40.782</span><span class="tip">Pop 101.956 · eleitores ~65.252 · verba R$ 820</span></div>
+<div class="hrow" tabindex="0"><span class="hlabel">Tefé</span><span class="htrack"><span class="hbar tA" style="width:70.5%"></span></span><span class="hval">31.711</span><span class="tip">Pop 79.278 · eleitores ~50.738 · verba R$ 638</span></div>
+<div class="hrow" tabindex="0"><span class="hlabel">Coari</span><span class="htrack"><span class="hbar tA" style="width:65.6%"></span></span><span class="hval">29.528</span><span class="tip">Pop 73.820 · eleitores ~47.245 · verba R$ 594</span></div>
+<div class="hrow" tabindex="0"><span class="hlabel">Tabatinga</span><span class="htrack"><span class="hbar tA" style="width:64.2%"></span></span><span class="hval">28.913</span><span class="tip">Pop 72.283 · eleitores ~46.261 · verba R$ 582</span></div>
+<div class="hrow" tabindex="0"><span class="hlabel">Iranduba</span><span class="htrack"><span class="hbar tA" style="width:59.6%"></span></span><span class="hval">26.846</span><span class="tip">Pop 67.114 · eleitores ~42.953 · verba R$ 540</span></div>
+<div class="hrow" tabindex="0"><span class="hlabel">Maués</span><span class="htrack"><span class="hbar tA" style="width:58.4%"></span></span><span class="hval">26.286</span><span class="tip">Pop 65.714 · eleitores ~42.057 · verba R$ 529</span></div>
+<div class="hrow" tabindex="0"><span class="hlabel">Humaitá</span><span class="htrack"><span class="hbar tA" style="width:55.4%"></span></span><span class="hval">24.925</span><span class="tip">Pop 62.312 · eleitores ~39.880 · verba R$ 501</span></div>
+<div class="hrow" tabindex="0"><span class="hlabel">Manicoré</span><span class="htrack"><span class="hbar tB" style="width:42.3%"></span></span><span class="hval">19.060</span><span class="tip">Pop 57.758 · eleitores ~36.965 · verba R$ 365</span></div>
+<div class="hrow" tabindex="0"><span class="hlabel">São Gabriel da Cachoeira</span><span class="htrack"><span class="hbar tB" style="width:41.4%"></span></span><span class="hval">18.614</span><span class="tip">Pop 56.406 · eleitores ~36.100 · verba R$ 357</span></div>
+<div class="hrow" tabindex="0"><span class="hlabel">Lábrea</span><span class="htrack"><span class="hbar tB" style="width:35.9%"></span></span><span class="hval">16.146</span><span class="tip">Pop 48.927 · eleitores ~31.313 · verba R$ 309</span></div>
+<div class="hrow" tabindex="0"><span class="hlabel">Autazes</span><span class="htrack"><span class="hbar tB" style="width:33.2%"></span></span><span class="hval">14.958</span><span class="tip">Pop 45.328 · eleitores ~29.010 · verba R$ 287</span></div>
+<div class="hrow" tabindex="0"><span class="hlabel">Benjamin Constant</span><span class="htrack"><span class="hbar tB" style="width:29.7%"></span></span><span class="hval">13.368</span><span class="tip">Pop 40.509 · eleitores ~25.926 · verba R$ 256</span></div>
+<div class="hrow" tabindex="0"><span class="hlabel">Boca do Acre</span><span class="htrack"><span class="hbar tB" style="width:28.0%"></span></span><span class="hval">12.621</span><span class="tip">Pop 38.246 · eleitores ~24.477 · verba R$ 242</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="sec-eyebrow">Mapa completo</p>
+  <h2>Os 62 municípios</h2>
+  <p class="lede">População IBGE 2024, eleitores estimados (~64% da pop), audiência Meta estimada e verba sugerida. Valores com * são a fatia proporcional informativa dentro da campanha agrupada C3 — a entrega real é otimizada pelo algoritmo da Meta dentro do grupo.</p>
+  <div class="tscroll">
+    <div class="tallwrap">
+    <table>
+      <thead><tr><th>#</th><th>Município</th><th>Tier</th><th class="num">População</th><th class="num">Eleitores est.</th><th class="num">Audiência Meta</th><th class="num">% do AM</th><th class="num">Verba</th></tr></thead>
+      <tbody><tr><td class="num muted">1</td><td>Manaus</td><td><span class="tier tier-MANAUS">Capital</span></td><td class="num">2.279.686</td><td class="num">1.458.999</td><td class="num strong">1.550.186</td><td class="num muted">70.0%</td><td class="num">R$ 17.000</td></tr>
+<tr><td class="num muted">2</td><td>Itacoatiara</td><td><span class="tier tier-A">Tier A</span></td><td class="num">112.520</td><td class="num">72.013</td><td class="num strong">45.008</td><td class="num muted">2.0%</td><td class="num">R$ 905</td></tr>
+<tr><td class="num muted">3</td><td>Manacapuru</td><td><span class="tier tier-A">Tier A</span></td><td class="num">110.691</td><td class="num">70.842</td><td class="num strong">44.276</td><td class="num muted">2.0%</td><td class="num">R$ 891</td></tr>
+<tr><td class="num muted">4</td><td>Parintins</td><td><span class="tier tier-A">Tier A</span></td><td class="num">101.956</td><td class="num">65.252</td><td class="num strong">40.782</td><td class="num muted">1.8%</td><td class="num">R$ 820</td></tr>
+<tr><td class="num muted">5</td><td>Tefé</td><td><span class="tier tier-A">Tier A</span></td><td class="num">79.278</td><td class="num">50.738</td><td class="num strong">31.711</td><td class="num muted">1.4%</td><td class="num">R$ 638</td></tr>
+<tr><td class="num muted">6</td><td>Coari</td><td><span class="tier tier-A">Tier A</span></td><td class="num">73.820</td><td class="num">47.245</td><td class="num strong">29.528</td><td class="num muted">1.3%</td><td class="num">R$ 594</td></tr>
+<tr><td class="num muted">7</td><td>Tabatinga</td><td><span class="tier tier-A">Tier A</span></td><td class="num">72.283</td><td class="num">46.261</td><td class="num strong">28.913</td><td class="num muted">1.3%</td><td class="num">R$ 582</td></tr>
+<tr><td class="num muted">8</td><td>Iranduba</td><td><span class="tier tier-A">Tier A</span></td><td class="num">67.114</td><td class="num">42.953</td><td class="num strong">26.846</td><td class="num muted">1.2%</td><td class="num">R$ 540</td></tr>
+<tr><td class="num muted">9</td><td>Maués</td><td><span class="tier tier-A">Tier A</span></td><td class="num">65.714</td><td class="num">42.057</td><td class="num strong">26.286</td><td class="num muted">1.2%</td><td class="num">R$ 529</td></tr>
+<tr><td class="num muted">10</td><td>Humaitá</td><td><span class="tier tier-A">Tier A</span></td><td class="num">62.312</td><td class="num">39.880</td><td class="num strong">24.925</td><td class="num muted">1.1%</td><td class="num">R$ 501</td></tr>
+<tr><td class="num muted">11</td><td>Manicoré</td><td><span class="tier tier-B">Tier B</span></td><td class="num">57.758</td><td class="num">36.965</td><td class="num strong">19.060</td><td class="num muted">0.9%</td><td class="num">R$ 365*</td></tr>
+<tr><td class="num muted">12</td><td>São Gabriel da Cachoeira</td><td><span class="tier tier-B">Tier B</span></td><td class="num">56.406</td><td class="num">36.100</td><td class="num strong">18.614</td><td class="num muted">0.8%</td><td class="num">R$ 357*</td></tr>
+<tr><td class="num muted">13</td><td>Lábrea</td><td><span class="tier tier-B">Tier B</span></td><td class="num">48.927</td><td class="num">31.313</td><td class="num strong">16.146</td><td class="num muted">0.7%</td><td class="num">R$ 309*</td></tr>
+<tr><td class="num muted">14</td><td>Autazes</td><td><span class="tier tier-B">Tier B</span></td><td class="num">45.328</td><td class="num">29.010</td><td class="num strong">14.958</td><td class="num muted">0.7%</td><td class="num">R$ 287*</td></tr>
+<tr><td class="num muted">15</td><td>Benjamin Constant</td><td><span class="tier tier-B">Tier B</span></td><td class="num">40.509</td><td class="num">25.926</td><td class="num strong">13.368</td><td class="num muted">0.6%</td><td class="num">R$ 256*</td></tr>
+<tr><td class="num muted">16</td><td>Boca do Acre</td><td><span class="tier tier-B">Tier B</span></td><td class="num">38.246</td><td class="num">24.477</td><td class="num strong">12.621</td><td class="num muted">0.6%</td><td class="num">R$ 242*</td></tr>
+<tr><td class="num muted">17</td><td>Eirunepé</td><td><span class="tier tier-B">Tier B</span></td><td class="num">35.534</td><td class="num">22.742</td><td class="num strong">11.726</td><td class="num muted">0.5%</td><td class="num">R$ 225*</td></tr>
+<tr><td class="num muted">18</td><td>São Paulo de Olivença</td><td><span class="tier tier-B">Tier B</span></td><td class="num">35.196</td><td class="num">22.525</td><td class="num strong">11.615</td><td class="num muted">0.5%</td><td class="num">R$ 223*</td></tr>
+<tr><td class="num muted">19</td><td>Borba</td><td><span class="tier tier-B">Tier B</span></td><td class="num">34.879</td><td class="num">22.323</td><td class="num strong">11.510</td><td class="num muted">0.5%</td><td class="num">R$ 221*</td></tr>
+<tr><td class="num muted">20</td><td>Barreirinha</td><td><span class="tier tier-B">Tier B</span></td><td class="num">33.436</td><td class="num">21.399</td><td class="num strong">11.034</td><td class="num muted">0.5%</td><td class="num">R$ 211*</td></tr>
+<tr><td class="num muted">21</td><td>Presidente Figueiredo</td><td><span class="tier tier-B">Tier B</span></td><td class="num">33.004</td><td class="num">21.123</td><td class="num strong">10.891</td><td class="num muted">0.5%</td><td class="num">R$ 209*</td></tr>
+<tr><td class="num muted">22</td><td>Careiro</td><td><span class="tier tier-B">Tier B</span></td><td class="num">32.442</td><td class="num">20.763</td><td class="num strong">10.706</td><td class="num muted">0.5%</td><td class="num">R$ 205*</td></tr>
+<tr><td class="num muted">23</td><td>Carauari</td><td><span class="tier tier-B">Tier B</span></td><td class="num">30.892</td><td class="num">19.771</td><td class="num strong">10.194</td><td class="num muted">0.5%</td><td class="num">R$ 195*</td></tr>
+<tr><td class="num muted">24</td><td>Santo Antônio do Içá</td><td><span class="tier tier-B">Tier B</span></td><td class="num">30.448</td><td class="num">19.487</td><td class="num strong">10.048</td><td class="num muted">0.5%</td><td class="num">R$ 193*</td></tr>
+<tr><td class="num muted">25</td><td>Nova Olinda do Norte</td><td><span class="tier tier-C">Tier C</span></td><td class="num">28.267</td><td class="num">18.091</td><td class="num strong">7.349</td><td class="num muted">0.3%</td><td class="num">R$ 141*</td></tr>
+<tr><td class="num muted">26</td><td>Fonte Boa</td><td><span class="tier tier-C">Tier C</span></td><td class="num">27.875</td><td class="num">17.840</td><td class="num strong">7.248</td><td class="num muted">0.3%</td><td class="num">R$ 139*</td></tr>
+<tr><td class="num muted">27</td><td>Jutaí</td><td><span class="tier tier-C">Tier C</span></td><td class="num">27.656</td><td class="num">17.700</td><td class="num strong">7.191</td><td class="num muted">0.3%</td><td class="num">R$ 138*</td></tr>
+<tr><td class="num muted">28</td><td>Boa Vista do Ramos</td><td><span class="tier tier-C">Tier C</span></td><td class="num">25.769</td><td class="num">16.492</td><td class="num strong">6.700</td><td class="num muted">0.3%</td><td class="num">R$ 128*</td></tr>
+<tr><td class="num muted">29</td><td>Rio Preto da Eva</td><td><span class="tier tier-C">Tier C</span></td><td class="num">25.723</td><td class="num">16.463</td><td class="num strong">6.688</td><td class="num muted">0.3%</td><td class="num">R$ 128*</td></tr>
+<tr><td class="num muted">30</td><td>Urucurituba</td><td><span class="tier tier-C">Tier C</span></td><td class="num">25.592</td><td class="num">16.379</td><td class="num strong">6.654</td><td class="num muted">0.3%</td><td class="num">R$ 128*</td></tr>
+<tr><td class="num muted">31</td><td>Ipixuna</td><td><span class="tier tier-C">Tier C</span></td><td class="num">25.458</td><td class="num">16.293</td><td class="num strong">6.619</td><td class="num muted">0.3%</td><td class="num">R$ 127*</td></tr>
+<tr><td class="num muted">32</td><td>Novo Aripuanã</td><td><span class="tier tier-C">Tier C</span></td><td class="num">24.987</td><td class="num">15.992</td><td class="num strong">6.497</td><td class="num muted">0.3%</td><td class="num">R$ 125*</td></tr>
+<tr><td class="num muted">33</td><td>Codajás</td><td><span class="tier tier-C">Tier C</span></td><td class="num">24.451</td><td class="num">15.649</td><td class="num strong">6.357</td><td class="num muted">0.3%</td><td class="num">R$ 122*</td></tr>
+<tr><td class="num muted">34</td><td>Beruri</td><td><span class="tier tier-C">Tier C</span></td><td class="num">22.136</td><td class="num">14.167</td><td class="num strong">5.755</td><td class="num muted">0.3%</td><td class="num">R$ 110*</td></tr>
+<tr><td class="num muted">35</td><td>Apuí</td><td><span class="tier tier-C">Tier C</span></td><td class="num">21.735</td><td class="num">13.910</td><td class="num strong">5.651</td><td class="num muted">0.3%</td><td class="num">R$ 108*</td></tr>
+<tr><td class="num muted">36</td><td>Nhamundá</td><td><span class="tier tier-C">Tier C</span></td><td class="num">21.106</td><td class="num">13.508</td><td class="num strong">5.488</td><td class="num muted">0.2%</td><td class="num">R$ 105*</td></tr>
+<tr><td class="num muted">37</td><td>Tapauá</td><td><span class="tier tier-C">Tier C</span></td><td class="num">20.501</td><td class="num">13.121</td><td class="num strong">5.330</td><td class="num muted">0.2%</td><td class="num">R$ 102*</td></tr>
+<tr><td class="num muted">38</td><td>Pauini</td><td><span class="tier tier-C">Tier C</span></td><td class="num">20.232</td><td class="num">12.948</td><td class="num strong">5.260</td><td class="num muted">0.2%</td><td class="num">R$ 101*</td></tr>
+<tr><td class="num muted">39</td><td>Tonantins</td><td><span class="tier tier-C">Tier C</span></td><td class="num">20.224</td><td class="num">12.943</td><td class="num strong">5.258</td><td class="num muted">0.2%</td><td class="num">R$ 101*</td></tr>
+<tr><td class="num muted">40</td><td>Careiro da Várzea</td><td><span class="tier tier-C">Tier C</span></td><td class="num">19.809</td><td class="num">12.678</td><td class="num strong">5.150</td><td class="num muted">0.2%</td><td class="num">R$ 99*</td></tr>
+<tr><td class="num muted">41</td><td>Urucará</td><td><span class="tier tier-C">Tier C</span></td><td class="num">19.505</td><td class="num">12.483</td><td class="num strong">5.071</td><td class="num muted">0.2%</td><td class="num">R$ 97*</td></tr>
+<tr><td class="num muted">42</td><td>Barcelos</td><td><span class="tier tier-C">Tier C</span></td><td class="num">18.626</td><td class="num">11.921</td><td class="num strong">4.843</td><td class="num muted">0.2%</td><td class="num">R$ 93*</td></tr>
+<tr><td class="num muted">43</td><td>Anori</td><td><span class="tier tier-C">Tier C</span></td><td class="num">17.932</td><td class="num">11.476</td><td class="num strong">4.662</td><td class="num muted">0.2%</td><td class="num">R$ 89*</td></tr>
+<tr><td class="num muted">44</td><td>Envira</td><td><span class="tier tier-C">Tier C</span></td><td class="num">17.920</td><td class="num">11.469</td><td class="num strong">4.659</td><td class="num muted">0.2%</td><td class="num">R$ 89*</td></tr>
+<tr><td class="num muted">45</td><td>Canutama</td><td><span class="tier tier-C">Tier C</span></td><td class="num">17.885</td><td class="num">11.446</td><td class="num strong">4.650</td><td class="num muted">0.2%</td><td class="num">R$ 89*</td></tr>
+<tr><td class="num muted">46</td><td>Manaquiri</td><td><span class="tier tier-C">Tier C</span></td><td class="num">17.009</td><td class="num">10.886</td><td class="num strong">4.422</td><td class="num muted">0.2%</td><td class="num">R$ 85*</td></tr>
+<tr><td class="num muted">47</td><td>Alvarães</td><td><span class="tier tier-C">Tier C</span></td><td class="num">16.670</td><td class="num">10.669</td><td class="num strong">4.334</td><td class="num muted">0.2%</td><td class="num">R$ 83*</td></tr>
+<tr><td class="num muted">48</td><td>Novo Airão</td><td><span class="tier tier-C">Tier C</span></td><td class="num">16.467</td><td class="num">10.539</td><td class="num strong">4.281</td><td class="num muted">0.2%</td><td class="num">R$ 82*</td></tr>
+<tr><td class="num muted">49</td><td>Atalaia do Norte</td><td><span class="tier tier-C">Tier C</span></td><td class="num">15.892</td><td class="num">10.171</td><td class="num strong">4.132</td><td class="num muted">0.2%</td><td class="num">R$ 79*</td></tr>
+<tr><td class="num muted">50</td><td>Maraã</td><td><span class="tier tier-C">Tier C</span></td><td class="num">15.843</td><td class="num">10.140</td><td class="num strong">4.119</td><td class="num muted">0.2%</td><td class="num">R$ 79*</td></tr>
+<tr><td class="num muted">51</td><td>Uarini</td><td><span class="tier tier-C">Tier C</span></td><td class="num">15.278</td><td class="num">9.778</td><td class="num strong">3.972</td><td class="num muted">0.2%</td><td class="num">R$ 76*</td></tr>
+<tr><td class="num muted">52</td><td>Guajará</td><td><span class="tier tier-C">Tier C</span></td><td class="num">14.332</td><td class="num">9.172</td><td class="num strong">3.726</td><td class="num muted">0.2%</td><td class="num">R$ 71*</td></tr>
+<tr><td class="num muted">53</td><td>Caapiranga</td><td><span class="tier tier-C">Tier C</span></td><td class="num">14.310</td><td class="num">9.158</td><td class="num strong">3.721</td><td class="num muted">0.2%</td><td class="num">R$ 71*</td></tr>
+<tr><td class="num muted">54</td><td>Santa Isabel do Rio Negro</td><td><span class="tier tier-C">Tier C</span></td><td class="num">14.176</td><td class="num">9.073</td><td class="num strong">3.686</td><td class="num muted">0.2%</td><td class="num">R$ 71*</td></tr>
+<tr><td class="num muted">55</td><td>Silves</td><td><span class="tier tier-C">Tier C</span></td><td class="num">12.404</td><td class="num">7.939</td><td class="num strong">3.225</td><td class="num muted">0.1%</td><td class="num">R$ 62*</td></tr>
+<tr><td class="num muted">56</td><td>São Sebastião do Uatumã</td><td><span class="tier tier-C">Tier C</span></td><td class="num">12.247</td><td class="num">7.838</td><td class="num strong">3.184</td><td class="num muted">0.1%</td><td class="num">R$ 61*</td></tr>
+<tr><td class="num muted">57</td><td>Itamarati</td><td><span class="tier tier-C">Tier C</span></td><td class="num">11.730</td><td class="num">7.507</td><td class="num strong">3.050</td><td class="num muted">0.1%</td><td class="num">R$ 58*</td></tr>
+<tr><td class="num muted">58</td><td>Amaturá</td><td><span class="tier tier-C">Tier C</span></td><td class="num">11.411</td><td class="num">7.303</td><td class="num strong">2.967</td><td class="num muted">0.1%</td><td class="num">R$ 57*</td></tr>
+<tr><td class="num muted">59</td><td>Juruá</td><td><span class="tier tier-C">Tier C</span></td><td class="num">11.152</td><td class="num">7.137</td><td class="num strong">2.900</td><td class="num muted">0.1%</td><td class="num">R$ 56*</td></tr>
+<tr><td class="num muted">60</td><td>Itapiranga</td><td><span class="tier tier-C">Tier C</span></td><td class="num">10.805</td><td class="num">6.915</td><td class="num strong">2.809</td><td class="num muted">0.1%</td><td class="num">R$ 54*</td></tr>
+<tr><td class="num muted">61</td><td>Anamã</td><td><span class="tier tier-C">Tier C</span></td><td class="num">10.318</td><td class="num">6.604</td><td class="num strong">2.683</td><td class="num muted">0.1%</td><td class="num">R$ 51*</td></tr>
+<tr><td class="num muted">62</td><td>Japurá</td><td><span class="tier tier-C">Tier C</span></td><td class="num">9.397</td><td class="num">6.014</td><td class="num strong">2.443</td><td class="num muted">0.1%</td><td class="num">R$ 47*</td></tr></tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="sec-eyebrow">Cronograma</p>
+  <h2>Duas fases até 01/10</h2>
+  <div class="phases">
+    <div class="phase">
+      <div class="ph-dates">Fase 1 · 12 → 26/09 · ~60% da verba</div>
+      <h3>Presença e entrega de mandato</h3>
+      <ul>
+        <li>Reconhecimento em vídeo (jingle "137 Leis, Uma Missão" + criativo motriz) nos 3 grupos</li>
+        <li>Interior: destacar entregas estaduais — saúde, articulação com o Governo</li>
+        <li>Últimos criativos novos submetidos até <strong>26/09</strong> (margem pra análise Meta de até 48h)</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="ph-dates">Fase 2 · 27/09 → 01/10 · ~40% da verba</div>
+      <h3>Conversão de voto — "confirma 20000"</h3>
+      <ul>
+        <li>Mensagem única: dia 04/10, Deputado Estadual, <strong>20000</strong></li>
+        <li>Frequência alta é desejada aqui (memorização do número)</li>
+        <li>Nenhum criativo novo com IA envolvendo candidato após 28/09</li>
+        <li>Término programado de TODAS as campanhas: 01/10 23:59</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="sec-eyebrow">Gestão de risco</p>
+  <h2>Regras de realocação</h2>
+  <ul class="rules">
+    <li><strong>CPM interior &gt; R$ 4,00</strong> por 2 dias seguidos → realocar o excedente pra Manaus.</li>
+    <li><strong>Subentrega</strong> (gasto diário &lt; 80% do previsto por 2 dias) em C2/C3 → ampliar posicionamentos (Advantage+) antes de mexer em verba.</li>
+    <li>Checagem diária no Gerenciador: gasto, CPM, alcance e frequência por campanha.</li>
+    <li>Margem de erro das estimativas de interior: <strong>±20%</strong> — conferir o público real no Gerenciador ao criar cada conjunto e ajustar verba na mesma proporção.</li>
+  </ul>
+</section>
+
+<section>
+  <p class="sec-eyebrow">Metodologia</p>
+  <h2>Como os números foram estimados</h2>
+  <ul class="rules small">
+    <li><strong>População:</strong> IBGE, estimativa oficial 2024 (agregado 6579), os 62 municípios do AM.</li>
+    <li><strong>Eleitores:</strong> ~64% da população (razão eleitorado/população do AM).</li>
+    <li><strong>Audiência Meta:</strong> % da população por tier — Manaus 68% · Tier A 40% · Tier B 33% · Tier C 26%. Calibrado pelos dados reais da conta (726 mil únicos alcançados até 07/09) e pela penetração de internet no interior do Norte.</li>
+    <li><strong>CPM:</strong> Manaus R$ 1,98 (observado na conta 1572731044553693, ago–set/26); interior R$ 2,30 (estimado).</li>
+    <li><strong>Alcance:</strong> curva de saturação com teto efetivo de 90% (capital) e 80–85% (interior).</li>
+    <li><strong>Imposto:</strong> ~13,5% embutido no crédito pré-pago (faixa 12–15%).</li>
+  </ul>
+</section>
+
+<section>
+  <p class="sec-eyebrow">Compliance</p>
+  <h2>Checklist legal — vale pra toda peça</h2>
+  <ul class="check">
+    <li>Categoria especial "Temas sociais, eleições ou política" + disclaimer do Felipe em toda campanha</li>
+    <li>"Propaganda Eleitoral" + CNPJ 68.462.037/0001-75 visíveis na própria peça</li>
+    <li>Só promoção da própria candidatura — zero ataque ou comparação com adversário</li>
+    <li>Mídia com IA → rótulo TSE explícito no criativo + declaração no Gerenciador · deepfake nunca</li>
+    <li>Data de término ≤ 01/10/2026 programada em TODAS as campanhas</li>
+    <li>Pagamento pela conta bancária de campanha · NF no CNPJ de campanha</li>
+    <li>Teto legal: R$ 60 mil acumulado = 4,7% de R$ 1,27 mi — folga total</li>
+  </ul>
+</section>
+
+<footer>
+  Documento de planejamento interno — Campanha Felipe Souza 20000 · Gestão de tráfego: Diego Nobre / DNIA · Dados: IBGE 2024 + conta de anúncios da campanha · Estimativas sujeitas a confirmação no Gerenciador de Anúncios.
+</footer>
+</div>
+
+</body>
+</html>
