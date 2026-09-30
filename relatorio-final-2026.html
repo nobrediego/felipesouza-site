@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Relatório Final de Mídia — Felipe Souza 20000 · Eleições 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+:root{
+  --bg:#F7F8FB; --surface:#FFFFFF; --ink:#1A2142; --muted:#5D6580; --line:#E0E4F0;
+  --blue:#232E7B; --blue-deep:#232E7B; --blue-mid:#4A5AC4;
+  --gold:#F5B211; --gold-ink:#7A5A00; --track:#ECEFF7;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0D1120; --surface:#161C33; --ink:#E9ECF7; --muted:#A0A9C4; --line:#2A3352;
+  --blue:#8C9AE8; --blue-deep:#4A5AC4; --blue-mid:#6C7CDB;
+  --gold:#F5B211; --gold-ink:#F0C24B; --track:#1C2440;
+}}
+:root[data-theme="dark"]{
+  --bg:#0D1120; --surface:#161C33; --ink:#E9ECF7; --muted:#A0A9C4; --line:#2A3352;
+  --blue:#8C9AE8; --blue-deep:#4A5AC4; --blue-mid:#6C7CDB;
+  --gold:#F5B211; --gold-ink:#F0C24B; --track:#1C2440;
+}
+:root[data-theme="light"]{
+  --bg:#F7F8FB; --surface:#FFFFFF; --ink:#1A2142; --muted:#5D6580; --line:#E0E4F0;
+  --blue:#232E7B; --blue-deep:#232E7B; --blue-mid:#4A5AC4;
+  --gold:#F5B211; --gold-ink:#7A5A00; --track:#ECEFF7;
+}
+*{box-sizing:border-box}
+body{background:var(--bg); color:var(--ink);
+  font:16px/1.6 "Inter", "Segoe UI", system-ui, sans-serif; margin:0; padding:0;}
+h1,h2,h3,.stat .v,.bignum,.cta-final .n{font-family:"Montserrat","Inter",sans-serif;}
+.wrap{max-width:1060px; margin:0 auto; padding:40px 24px 80px;}
+
+header.hero{position:relative; border-bottom:3px solid var(--gold); padding:36px 0 40px; margin-bottom:12px; overflow:hidden;}
+.eyebrow{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--blue); font-weight:600; margin:0 0 10px;}
+h1{font-size:clamp(28px,4.4vw,44px); line-height:1.1; margin:0 0 12px; font-weight:900; text-wrap:balance;}
+.sub{color:var(--muted); margin:0; max-width:66ch;}
+.bignum{font-size:clamp(60px,12vw,130px); font-weight:900; letter-spacing:-.03em; line-height:1;
+  color:var(--gold); opacity:.16; position:absolute; right:-6px; top:8px; user-select:none; pointer-events:none;
+  animation:floatNum 6s ease-in-out infinite;}
+@keyframes floatNum{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+h2{font-size:22px; font-weight:800; margin:0 0 4px;}
+section{margin:48px 0;}
+.sec-eyebrow{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); font-weight:600; margin:0 0 6px;}
+.lede{color:var(--muted); margin:6px 0 20px; max-width:72ch;}
+
+.stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px; margin:26px 0 0;}
+.stat{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:20px 20px 16px; position:relative; overflow:hidden;}
+.stat::after{content:""; position:absolute; inset:auto 0 0 0; height:3px; background:linear-gradient(90deg,var(--blue-mid),var(--gold)); transform:scaleX(0); transform-origin:left; transition:transform 1s ease .2s;}
+.stat.on::after{transform:scaleX(1);}
+.stat .v{font-size:clamp(25px,3.4vw,33px); font-weight:900; font-variant-numeric:tabular-nums; letter-spacing:-.01em;}
+.stat .l{font-size:13px; color:var(--muted); margin-top:2px;}
+.stat .d{font-size:12px; color:var(--muted); margin-top:8px; border-top:1px solid var(--line); padding-top:8px;}
+.stat.hl .v{color:var(--gold-ink);}
+
+.funnel{display:grid; gap:10px; margin-top:18px;}
+.fstep{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:20px 22px;
+  opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease;}
+.fstep.on{opacity:1; transform:none;}
+.fstep:nth-child(2){transition-delay:.15s; margin-left:4%;}
+.fstep:nth-child(3){transition-delay:.3s; margin-left:8%;}
+.fstep .ftag{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+  background:var(--blue-mid); color:#fff; border-radius:999px; padding:3px 12px; margin-bottom:8px;}
+.fstep:nth-child(3) .ftag{background:var(--gold); color:#4a3600;}
+.fstep h3{margin:0 0 6px; font-size:17px; font-weight:800;}
+.fstep p{margin:0; color:var(--muted); font-size:14.5px; max-width:80ch;}
+.fstep .fmetric{margin-top:10px; font-size:13px; font-weight:700; color:var(--blue-mid);}
+.fstep:nth-child(3) .fmetric{color:var(--gold-ink);}
+
+.adgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:16px; margin-top:18px;}
+.adcard{background:var(--surface); border:1px solid var(--line); border-radius:14px; overflow:hidden;
+  box-shadow:0 2px 12px rgba(26,33,66,.06); opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease;}
+.adcard.on{opacity:1; transform:none;}
+.adcard:nth-child(2){transition-delay:.1s;} .adcard:nth-child(3){transition-delay:.2s;} .adcard:nth-child(4){transition-delay:.3s;}
+.adhead{display:flex; align-items:center; gap:10px; padding:12px 14px 8px;}
+.adavatar{width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,var(--blue-mid),var(--blue-deep));
+  color:#fff; font-weight:900; font-size:14px; display:flex; align-items:center; justify-content:center; font-family:"Montserrat",sans-serif;}
+.adid strong{display:block; font-size:13.5px;}
+.adid span{font-size:11px; color:var(--muted); display:block; line-height:1.35;}
+.adbody{padding:4px 14px 12px; font-size:13.5px; line-height:1.5;}
+.adbanner{margin:0 14px; border-radius:8px; padding:22px 16px; text-align:center; color:#fff; font-weight:900;
+  background:linear-gradient(135deg,var(--blue-deep),var(--blue-mid)); font-size:19px; letter-spacing:.01em; font-family:"Montserrat",sans-serif;}
+.adbanner small{display:block; font-weight:600; font-size:11px; opacity:.85; margin-top:4px; letter-spacing:.08em;}
+.adbanner.gold{background:linear-gradient(135deg,#c79008,var(--gold)); color:#4a3600;}
+.admeta{display:flex; gap:8px; flex-wrap:wrap; padding:12px 14px 14px;}
+.chip{font-size:11px; font-weight:700; border:1px solid var(--line); color:var(--muted); border-radius:999px; padding:3px 10px;}
+.chip.hot{border-color:var(--gold); color:var(--gold-ink);}
+
+ul.rules{padding-left:20px; margin:12px 0 0;} ul.rules li{margin:9px 0; max-width:78ch;}
+ul.rules li b{color:var(--blue);}
+.legal{background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--gold); border-radius:8px; padding:18px 20px; margin-top:16px; font-size:14.5px; color:var(--muted);}
+.legal b{color:var(--ink);}
+.cta-final{text-align:center; padding:46px 20px; border-radius:14px; margin-top:20px;
+  background:linear-gradient(135deg,var(--blue-deep),var(--blue-mid)); color:#fff;}
+.cta-final .n{font-size:clamp(50px,9vw,88px); font-weight:900; letter-spacing:.02em; color:var(--gold); line-height:1; animation:pulseN 2.4s ease-in-out infinite;}
+@keyframes pulseN{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
+.cta-final p{margin:10px 0 0; font-weight:700; letter-spacing:.02em;}
+.cta-final small{display:block; margin-top:6px; opacity:.85; font-weight:500;}
+footer{margin-top:60px; border-top:1px solid var(--line); padding-top:18px; font-size:13px; color:var(--muted);}
+footer a{color:var(--blue-mid);}
+@media (prefers-reduced-motion:reduce){ .bignum,.cta-final .n{animation:none} .fstep,.adcard{opacity:1; transform:none} }
+</style>
+
+<div class="wrap">
+<header class="hero">
+  <div class="bignum">20000</div>
+  <p class="eyebrow">Relatório final de mídia · Meta (Facebook + Instagram) · 16/08 – 30/09/2026</p>
+  <h1>47 dias de campanha digital.<br>2,4 milhões de pessoas alcançadas.</h1>
+  <p class="sub">Balanço completo da mídia paga da campanha <strong>Felipe Souza 20000 — Deputado Estadual</strong>: números consolidados do Gerenciador de Anúncios, a estratégia do funil eleitoral executada etapa por etapa e os criativos que fixaram o 20000 na memória do eleitor.</p>
+</header>
+
+<section>
+  <p class="sec-eyebrow">Os números da campanha</p>
+  <h2>Alcance de gigante com investimento de estrategista</h2>
+  <p class="lede">Dados consolidados da conta de anúncios oficial da campanha (Gerenciador Meta, 30/09/2026, período total desde 16/08).</p>
+  <div class="stats">
+    <div class="stat hl"><div class="v" data-count="2360099">0</div><div class="l">pessoas alcançadas (contas únicas)</div><div class="d">mais de 2 em cada 3 pessoas do eleitorado do AM em escala</div></div>
+    <div class="stat hl"><div class="v"><span data-count="23">0</span>,4 mi</div><div class="l">impressões entregues</div><div class="d">cada eleitor alcançado viu a campanha ~10 vezes em média</div></div>
+    <div class="stat"><div class="v">R$ <span data-count="80822">0</span></div><div class="l">investimento total</div><div class="d">apenas 6,4% do teto legal — disciplina financeira total</div></div>
+    <div class="stat"><div class="v">R$ 3,45</div><div class="l">CPM médio (custo por mil impressões)</div><div class="d">fração do custo de qualquer mídia tradicional</div></div>
+    <div class="stat"><div class="v"><span data-count="19">0</span> anúncios</div><div class="l">10 campanhas estruturadas</div><div class="d">mensagem concentrada: nenhum rival do top 10 fez tanto com tão pouco</div></div>
+    <div class="stat"><div class="v">7º</div><div class="l">no ranking estadual de investimento</div><div class="d">entre 92 candidaturas ativas — subindo na reta final</div></div>
+  </div>
+</section>
+
+<section>
+  <p class="sec-eyebrow">A estratégia</p>
+  <h2>O funil eleitoral: cada real no estágio certo, na hora certa</h2>
+  <p class="lede">Campanha digital que ganha eleição não é a que grita mais alto no fim — é a que constrói o caminho do voto por etapas. Foi o que esta campanha executou, amplificando um mandato com 137 leis e 50.454 votos de base real.</p>
+  <div class="funnel">
+    <div class="fstep">
+      <span class="ftag">Etapa 1 · Alcance</span>
+      <h3>Reapresentar o trabalho pra todo o estado (16/08 em diante)</h3>
+      <p>Base do funil com CPM baixo: o jingle "trabalhou, trabalhou, ele sabe fazer", as 137 leis e as marcas do mandato — Hospital do Idoso, leis de proteção a mulheres, crianças, idosos e pessoas com deficiência — entregues a milhões de amazonenses em Manaus e no interior.</p>
+      <div class="fmetric">Resultado: 2.360.099 pessoas únicas alcançadas</div>
+    </div>
+    <div class="fstep">
+      <span class="ftag">Etapa 2 · Consideração</span>
+      <h3>Transformar reconhecimento em preferência (setembro)</h3>
+      <p>Criativos de pauta e de mobilização sobre a audiência construída: histórias reais das leis em ação e o kit do apoiador — figurinhas, moldura de perfil, jingle e santinho digital pra transformar eleitor em multiplicador da campanha.</p>
+      <div class="fmetric">Resultado: eleitor engajado virou canal de distribuição da mensagem</div>
+    </div>
+    <div class="fstep">
+      <span class="ftag">Etapa 3 · Lembrança</span>
+      <h3>Fixar o número na memória (26/09 – 01/10)</h3>
+      <p>Na semana da decisão, frequência máxima no refrão que o eleitor já sabia de cor: nome, trabalho e número <strong>20000</strong> replicados em múltiplos anúncios simultâneos — o santinho virtual chegando à palma da mão na hora exata em que lembrança vira voto. E foi nessa fase que o investimento quase dobrou: verba guardada pra hora que mais importa.</p>
+      <div class="fmetric">Resultado: +95% de investimento na última semana — o fechamento planejado</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="sec-eyebrow">Os criativos</p>
+  <h2>O que o eleitor viu — as peças que carregaram a campanha</h2>
+  <p class="lede">Reprodução fiel dos anúncios veiculados (texto real, dados públicos da Biblioteca de Anúncios da Meta). Todos com aviso "Propaganda Eleitoral" + CNPJ da campanha, do primeiro ao último dia.</p>
+  <div class="adgrid">
+    <div class="adcard">
+      <div class="adhead"><div class="adavatar">FS</div><div class="adid"><strong>Felipe Souza</strong><span>Patrocinado · Propaganda Eleitoral<br>ELEICAO 2026 LUIS FELIPE SILVA DE SOUZA…</span></div></div>
+      <div class="adbody">Já sabe o refrão? Felipe Souza é 20000, trabalhou, trabalhou, ele sabe fazer! Manda pra quem também quer um deputado que entrega resultado. ✅</div>
+      <div class="adbanner gold">TRABALHOU, TRABALHOU,<br>ELE SABE FAZER!<small>JINGLE OFICIAL · MAIOR INVESTIMENTO DA CAMPANHA</small></div>
+      <div class="admeta"><span class="chip hot">Carro-chefe</span><span class="chip">R$ 9–10 mil</span><span class="chip">+1 mi impressões</span></div>
+    </div>
+    <div class="adcard">
+      <div class="adhead"><div class="adavatar">FS</div><div class="adid"><strong>Felipe Souza</strong><span>Patrocinado · Propaganda Eleitoral<br>ELEICAO 2026 LUIS FELIPE SILVA DE SOUZA…</span></div></div>
+      <div class="adbody">137 leis. Uma missão: cuidar da nossa gente. 🟢 Cada projeto que apresento nasce de uma conversa, de um problema real de quem mora aqui no Amazonas. É assim que a gente muda a vida das pessoas: lei por lei, direito por direito. 💪</div>
+      <div class="adbanner">137 LEIS.<br>UMA MISSÃO.<small>O MANDATO EM NÚMEROS</small></div>
+      <div class="admeta"><span class="chip">R$ 5–6 mil</span><span class="chip">+1 mi impressões</span><span class="chip">Etapa de consideração</span></div>
+    </div>
+    <div class="adcard">
+      <div class="adhead"><div class="adavatar">FS</div><div class="adid"><strong>Felipe Souza</strong><span>Patrocinado · Propaganda Eleitoral<br>ELEICAO 2026 LUIS FELIPE SILVA DE SOUZA…</span></div></div>
+      <div class="adbody">Desde a época de vereador, venho trabalhando pela construção do Hospital do Idoso… Cuidar de quem cuidou do Amazonas é uma questão de respeito e dignidade. 💙</div>
+      <div class="adbanner">HOSPITAL<br>DO IDOSO<small>A LUTA DE ANOS QUE VIROU BANDEIRA</small></div>
+      <div class="admeta"><span class="chip">R$ 5–6 mil</span><span class="chip">+1 mi impressões</span><span class="chip">Pauta-coração</span></div>
+    </div>
+    <div class="adcard">
+      <div class="adhead"><div class="adavatar">FS</div><div class="adid"><strong>Felipe Souza</strong><span>Patrocinado · Propaganda Eleitoral<br>ELEICAO 2026 LUIS FELIPE SILVA DE SOUZA…</span></div></div>
+      <div class="adbody">Bora fazer parte dessa campanha? 🙌 No link da bio tem tudo pra você apoiar o Felipe Souza: figurinhas, moldura, jingle e santinho digital. É só acessar e compartilhar! 🗳️</div>
+      <div class="adbanner">KIT DO APOIADOR<small>ELEITOR VIROU MULTIPLICADOR</small></div>
+      <div class="admeta"><span class="chip">R$ 5–6 mil</span><span class="chip">+1 mi impressões</span><span class="chip">Mobilização</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="sec-eyebrow">Posição competitiva</p>
+  <h2>Onde a campanha terminou no campo estadual do AM</h2>
+  <ul class="rules">
+    <li><b>7º lugar entre 92 candidaturas ativas</b> em investimento Meta no estado — e subindo: ganhou uma posição justamente na reta final, quando a régua ficou mais cara. <a href="/ranking-meta-am-2026">Ranking completo aqui</a>.</li>
+    <li><b>Eficiência única no pelotão de frente:</b> 19 anúncios contra 74 a 897 dos demais do top 10. Uma mensagem, um número, máxima memória por real investido.</li>
+    <li><b>Mídia amplificando base real:</b> 50.454 votos em 2022, liderança do Governo na ALEAM e 137 leis — o anúncio conversou com quem já conhece o trabalho.</li>
+    <li><b>6,4% do teto legal usado</b> (R$ 1,27 mi): top 7 do estado com fração do gasto permitido — prestação de contas limpa e margem intacta.</li>
+  </ul>
+</section>
+
+<section>
+  <p class="sec-eyebrow">Encerramento · 01/10</p>
+  <h2>Dentro da lei, do primeiro ao último segundo</h2>
+  <div class="legal">
+    Nos termos do <b>art. 57-C da Lei nº 9.504/97</b> e do Calendário Eleitoral do TSE (<b>Res. nº 23.760/2026</b>), quinta-feira, <b>1º de outubro é o último dia de circulação de propaganda paga na internet</b>. De 02 a 05/10, todo impulsionamento é vedado. Todas as campanhas foram programadas pra encerrar dentro do prazo, e 100% da veiculação rodou com aviso "Propaganda Eleitoral" e CNPJ da campanha na categoria correta da Meta. A mídia paga silencia; o refrão já está na cabeça do eleitor.
+  </div>
+  <div class="cta-final">
+    <div class="n">20000</div>
+    <p>Trabalhou, trabalhou — agora é com o eleitor.</p>
+    <small>Domingo, 04 de outubro — Felipe Souza, Deputado Estadual</small>
+  </div>
+</section>
+
+<footer>
+  Relatório final de mídia — Campanha Felipe Souza 20000 · Gestão de tráfego: <b>Diego Nobre / DNIA</b> · Fontes: Gerenciador de Anúncios Meta (conta oficial da campanha, consolidado 16/08–30/09/2026) e Biblioteca de Anúncios da Meta (dados públicos de transparência) · Impressões estimadas a partir de alcance × frequência médios da conta · Valores sujeitos a atualização pela Meta.
+</footer>
+</div>
+
+<script>
+(function(){
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting) return;
+      e.target.classList.add('on');
+      e.target.querySelectorAll('[data-count]').forEach(function(el){
+        if(el.dataset.done) return; el.dataset.done = 1;
+        var end = parseInt(el.dataset.count,10), t0 = null;
+        function step(ts){ if(!t0) t0 = ts; var p = Math.min((ts-t0)/1400,1);
+          el.textContent = Math.round(end*(1-Math.pow(1-p,3))).toLocaleString('pt-BR');
+          if(p<1) requestAnimationFrame(step); }
+        requestAnimationFrame(step);
+      });
+      io.unobserve(e.target);
+    });
+  },{threshold:.25});
+  document.querySelectorAll('.stat,.fstep,.adcard').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
